@@ -10,6 +10,8 @@ Personal project to strengthen my QA Automation skills using **Cypress** (JavaSc
 - Structured test organization
 
 ## Project Structure
+
+```plaintext
 qa-js-automation/
 ├── cypress/                    # Cypress configuration and tests
 │   ├── e2e/                    # All end-to-end test files (.cy.js)
