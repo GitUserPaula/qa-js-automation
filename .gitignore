@@ -1,0 +1,58 @@
+# Node.js / NPM
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json  # opcional: si preferís no subirlo (algunos equipos lo piden)
+.yarn/
+
+# Cypress
+cypress/videos/
+cypress/screenshots/
+cypress/downloads/
+cypress/reports/
+cypress/cache/
+cypress/fixtures/example.json  # archivo de ejemplo que crea Cypress
+
+# Reports and evidence
+reports/
+reportes/
+mochawesome-report/
+cypress-report/
+evidencias/
+screenshots/
+videos/
+*.png
+*.jpg
+*.jpeg
+*.html  # si no querés subir los reportes HTML generados
+
+# Logs and temps
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Editor / IDE
+.vscode/
+.idea/
+*.code-workspace
+*.sublime-project
+*.sublime-workspace
+
+# Testing artifacts
+coverage/
+.nyc_output/
+test-results/
+blob-report/
+
+# Misc
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Playwright
+playwright-report/
+test-results/
+blob-report/
