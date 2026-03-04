@@ -11,11 +11,17 @@ Personal project to strengthen my QA Automation skills using **Cypress** (JavaSc
 
 ## Project Structure
 qa-js-automation/
-├── cypress/
-│   └── e2e/                  ← All my test files (.cy.js)
-├── pages/                    ← Page Objects (reusable page classes)
-├── package.json
-└── README.md
+├── cypress/                    # Cypress configuration and tests
+│   ├── e2e/                    # All end-to-end test files (.cy.js)
+│   ├── fixtures/               # Test data files (if needed)
+│   ├── support/                # Custom commands and setup
+│   └── ...                     # Other Cypress folders
+├── pages/                      # Page Object Model classes
+│   └── login-page.js           # Example: Login page actions and assertions
+├── package.json                # Dependencies and scripts
+├── package-lock.json           # Locked versions (optional to commit)
+├── cypress.config.js           # Cypress configuration
+└── README.md                   # This file!
 
 ## How to run
 ```bash
