@@ -9,13 +9,11 @@ describe('Login Page Tests', () => {
 
   it('should show error with invalid credentials', () => {
     loginPage.login('wronguser', 'wrongpass');
-
     loginPage.verifyErrorMessage('Your username is invalid!');
   });
 
   it('should login successfully with valid credentials', () => {
     loginPage.login('tomsmith', 'SuperSecretPassword!');
-
     loginPage.verifySuccessMessage();
   });
 });
