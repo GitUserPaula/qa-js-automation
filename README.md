@@ -1,14 +1,14 @@
-🚀 Cypress Automation Framework: E2E Testing
+#🚀 Cypress Automation Framework: E2E Testing
 
 ![Cypress](https://img.shields.io/badge/-Cypress-17202C?style=for-the-badge&logo=cypress&logoColor=69D3A2)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
 Professional QA Automation practice focusing on scalable architecture and UI reliability.
 
-🎯 Overview
+##🎯 Overview
 This repository contains a structured End-to-End (E2E) testing suite. The main goal is to demonstrate professional automation standards, ensuring clean code and easy maintenance.
 
-🛠️ Key Technical Implementations
+##🛠️ Key Technical Implementations
 Page Object Model (POM): Decoupled test logic from UI elements for 100% reusability.
 
 Custom Assertions: Robust error handling and data validation.
@@ -17,7 +17,7 @@ Automated Artifacts: Configured to capture screenshots on failure for faster deb
 
 Clean Code: Modularized selectors and functions.
 
-⚙️ How to Run
+##⚙️ How to Run
 Clone the repo: git clone ...
 
 Install dependencies: npm install
