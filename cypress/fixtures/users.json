@@ -1,0 +1,20 @@
+[
+  {
+    "username": "tomsmith",
+    "password": "SuperSecretPassword!",
+    "expected": "success",
+    "errorMessage": null
+  },
+  {
+    "username": "wronguser",
+    "password": "wrongpass",
+    "expected": "fail",
+    "errorMessage": "Your username is invalid!"
+  },
+  {
+    "username": "tomsmith",
+    "password": "wrongpassword",
+    "expected": "fail",
+    "errorMessage": "Your password is invalid!"
+  }
+]

@@ -1,72 +1,86 @@
+// pages/login-page.js
 class LoginPage {
   constructor() {
     this.url = 'https://the-internet.herokuapp.com/login';
 
     // Selectors
-    this.usernameField = '#username';
-    this.passwordField = '#password';
+    this.usernameInput = '#username';
+    this.passwordInput = '#password';
     this.loginButton = 'button[type="submit"]';
-    this.successMessage = '#flash.success';
-    this.errorMessage = '#flash.error';
+    this.successFlash = '#flash.success';
+    this.errorFlash = '#flash.error';
+    this.secureHeader = 'h2';
   }
 
   /**
-   * Navigates to the login page
+   * Navigate to the login page
    */
   visit() {
     cy.visit(this.url);
   }
 
   /**
-   * Enters username in the input field
-   * @param {string} username - The username to enter
+   * Enter username
+   * @param {string} username
    */
   enterUsername(username) {
-    cy.get(this.usernameField).type(username);
+    cy.get(this.usernameInput).clear().type(username);
   }
 
   /**
-   * Enters password in the input field
-   * @param {string} password - The password to enter
+   * Enter password
+   * @param {string} password
    */
   enterPassword(password) {
-    cy.get(this.passwordField).type(password);
+    cy.get(this.passwordInput).clear().type(password);
   }
 
   /**
-   * Clicks the login button
+   * Click the login button
    */
-  clickLogin() {
+  submit() {
     cy.get(this.loginButton).click();
   }
 
   /**
-   * Performs a complete login action
+   * Complete login flow
    * @param {string} username
    * @param {string} password
    */
   login(username, password) {
     this.enterUsername(username);
     this.enterPassword(password);
-    this.clickLogin();
+    this.submit();
   }
 
   /**
-   * Asserts that the success message is visible and contains expected text
+   * Verify successful login
    */
-  verifySuccessMessage() {
-    cy.get(this.successMessage)
+  verifySuccess() {
+    cy.url().should('include', '/secure');
+    cy.get(this.successFlash)
       .should('be.visible')
       .and('contain', 'You logged into a secure area!');
+    cy.get(this.secureHeader)
+      .should('be.visible')
+      .and('contain', 'Secure Area');
   }
 
   /**
-   * Asserts that the error message is visible and contains expected text
+   * Verify error message
+   * @param {string} expectedText
    */
-  verifyErrorMessage(expectedText) {
-    cy.get(this.errorMessage)
+  verifyError(expectedText) {
+    cy.get(this.errorFlash)
       .should('be.visible')
       .and('contain', expectedText);
+  }
+
+  /**
+   * Take screenshot on failure (optional helper)
+   */
+  takeScreenshotOnFailure(name) {
+    cy.screenshot(`failure-${name}`, { capture: 'fullPage' });
   }
 }
 
