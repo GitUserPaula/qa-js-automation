@@ -15,7 +15,7 @@ describe('Data-Driven Login Tests', () => {
         loginPage.login(user.username, user.password);
 
         if (user.expected === 'success') {
-          loginPage.verifySuccess();
+          loginPage.verifySuccessMessage();
         } else {
           loginPage.verifyErrorMessage(user.errorMessage);
         }
