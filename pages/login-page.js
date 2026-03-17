@@ -56,7 +56,7 @@ class LoginPage {
   /**
    * Verify successful login
    */
-  verifySuccess() {
+  verifySuccessMessage() {
     cy.url().should('include', '/secure');
     cy.get(this.successFlash)
       .should('be.visible')
