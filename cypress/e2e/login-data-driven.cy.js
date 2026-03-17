@@ -17,7 +17,7 @@ describe('Data-Driven Login Tests', () => {
         if (user.expected === 'success') {
           loginPage.verifySuccess();
         } else {
-          loginPage.verifyError(user.errorMessage);
+          loginPage.verifyErrorMessage(user.errorMessage);
         }
 
         // Reset for next iteration (volver al login page)
