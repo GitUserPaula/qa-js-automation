@@ -70,11 +70,11 @@ class LoginPage {
    * Verify error message
    * @param {string} expectedText
    */
-  verifyError(expectedText) {
-    cy.get(this.errorFlash)
-      .should('be.visible')
-      .and('contain', expectedText);
-  }
+  verifyErrorMessage(expectedText) {
+  cy.get(this.errorFlash)
+    .should('be.visible')
+    .and('contain', expectedText);
+}
 
   /**
    * Take screenshot on failure (optional helper)
